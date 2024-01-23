@@ -105,6 +105,7 @@ def bipartite():
     # professors --> only cs
     # classes
     # start with 2023 fall - 2024 spring
+    # colors: teachers == blue, classes == red
     
     return 
 
