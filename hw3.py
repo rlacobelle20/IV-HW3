@@ -77,13 +77,10 @@ def digraph(j_file):
     node_name.append('MATH 1 || Mathematics Options I')
     
     # math elective 2
-    dot.node('MATH 2', 'MATH 2 || Mathematics Options II')
-    node_num.append('MATH 2')
-    node_name.append('MATH 2 || Mathematics Options II')
+
     
     # hass elective --> chinese pathway
     # manually add all of chinese :)
-    
     
     # csci classes --> need course code
     
@@ -93,7 +90,6 @@ def digraph(j_file):
     # label: Code Name
     
     print(dot.source)
-    # hi
     
     dot.render(directory='doctest-output').replace('\\','/')
     dot.render(directory='doctest-output', view=True) 

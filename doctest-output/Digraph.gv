@@ -1,0 +1,37 @@
+// CSCI 2024 Template
+digraph {
+	"CSCI 1100" [label="Computer Science I"]
+	"CSCI 1200" [label="Data Structures"]
+	"CSCI 2200" [label="Foundations of Computer Science"]
+	"CSCI 2500" [label="Computer Organization"]
+	"CSCI 2300" [label="Introduction to Algorithms"]
+	"CSCI 2600" [label="Principles of Software"]
+	"CSCI 4430" [label="Programming Languages"]
+	"CSCI 4210" [label="Operating Systems"]
+	"BIOL 1010" [label="Intro to Biology"]
+	"BIOL 1015" [label="Intro to Biology Laboratory"]
+	"BIOL 1010" -> "BIOL 1015"
+	"PHYS 1100" [label="Physics I"]
+	SCIO [label="Science Option"]
+	"MATH 1010" [label="Calculus I"]
+	"MATH 1020" [label="Calculus I"]
+	"MATH 1" [label="Mathematics Options I"]
+	"MATH 2" [label="Mathematics Options II"]
+	"CSCI 1100" -> "CSCI 1200"
+	"CSCI 1200" -> "CSCI 2200"
+	"MATH 1010" -> "CSCI 2200"
+	"MATH 1020" -> "CSCI 2200"
+	"CSCI 1200" -> "CSCI 2500"
+	"CSCI 1200" -> "CSCI 2300"
+	"CSCI 2200" -> "CSCI 2300"
+	"MATH 1010" -> "CSCI 2300"
+	"MATH 1020" -> "CSCI 2300"
+	"CSCI 1200" -> "CSCI 2600"
+	"CSCI 2200" -> "CSCI 2600"
+	"CSCI 2300" -> "CSCI 4430"
+	"CSCI 2600" -> "CSCI 4430"
+	"CSCI 2300" -> "CSCI 4210"
+	"CSCI 2500" -> "CSCI 4210"
+	"BIOL 1015" -> "BIOL 1010"
+	"MATH 1010" -> "MATH 1020"
+}
