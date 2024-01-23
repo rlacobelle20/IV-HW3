@@ -82,6 +82,9 @@ def digraph(j_file):
     node_name.append('MATH 2 || Mathematics Options II')
     
     # hass elective --> chinese pathway
+    # manually add all of chinese :)
+    
+    
     # csci classes --> need course code
     
     # colors --> different for each concentration 
