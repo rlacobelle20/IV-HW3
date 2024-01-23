@@ -27,6 +27,8 @@ def digraph(j_file):
     # colors --> different for each concentration 
     # even out levels
     
+    # label: Code Name
+    
     print(dot.source)
     
     dot.render(directory='doctest-output').replace('\\','/')
