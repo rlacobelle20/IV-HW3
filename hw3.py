@@ -93,6 +93,7 @@ def digraph(j_file):
     # label: Code Name
     
     print(dot.source)
+    # hi
     
     dot.render(directory='doctest-output').replace('\\','/')
     dot.render(directory='doctest-output', view=True) 
