@@ -25,10 +25,12 @@ def digraph(j_file):
     node_name = [] # holds course name
     edges = [] # holds all prereq data
     
+    """
     # add CS1
     dot.node('CSCI 1100','Computer Science I')
     node_num.append('CSCI 1100')
     node_name.append('Computer Science I')
+    
     
     # major required
     for i in range(7):
@@ -37,7 +39,7 @@ def digraph(j_file):
         node_num.append(course)
         node_name.append(data_csci[4]['rules'][0]['rule_data']['rules'][i]['label'])
     
-    
+    """
     # math/science core
     # intro to bio/intro to bio lab
     dot.node('BIOL 1010','Intro to Biology')
@@ -116,6 +118,16 @@ def digraph(j_file):
     dot.edge('LANG 2420','LANG 4961')
     
     # csci classes --> need course code
+    # don't do grad classes, no repeats
+    # [key for key, value in keyValue.items() if value > 60]
+    csci_pre = [k for k in data_pre.keys() if "CSCI" in k]
+    
+    for i in csci_pre:
+        # do not use grad classes
+        if i[5] != "6":
+            dot.node(i,data_pre[i]['title'])
+            node_num.append(i)
+            node_name.append(data_pre[i]['title'])
     
     # colors --> different for each concentration 
     # even out levels
@@ -133,7 +145,7 @@ def digraph(j_file):
     
     # label: Code Name
     
-    print(dot.source)
+    # print(dot.source)
     
     dot.render(directory='doctest-output').replace('\\','/')
     dot.render(directory='doctest-output', view=True) 

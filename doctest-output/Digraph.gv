@@ -1,13 +1,5 @@
 // CSCI 2024 Template
 digraph {
-	"CSCI 1100" [label="Computer Science I"]
-	"CSCI 1200" [label="Data Structures"]
-	"CSCI 2200" [label="Foundations of Computer Science"]
-	"CSCI 2500" [label="Computer Organization"]
-	"CSCI 2300" [label="Introduction to Algorithms"]
-	"CSCI 2600" [label="Principles of Software"]
-	"CSCI 4430" [label="Programming Languages"]
-	"CSCI 4210" [label="Operating Systems"]
 	"BIOL 1010" [label="Intro to Biology"]
 	"BIOL 1015" [label="Intro to Biology Laboratory"]
 	"BIOL 1010" -> "BIOL 1015"
@@ -24,21 +16,113 @@ digraph {
 	"LANG 4470" [label="CHINESE V"]
 	"LANG 4961" [label="Chinese Lang & Culture In Film"]
 	"LANG 2420" -> "LANG 4961"
-	"CSCI 1100" -> "CSCI 1200"
-	"CSCI 1200" -> "CSCI 2200"
-	"MATH 1010" -> "CSCI 2200"
-	"MATH 1020" -> "CSCI 2200"
-	"CSCI 1200" -> "CSCI 2500"
-	"CSCI 1200" -> "CSCI 2300"
-	"CSCI 2200" -> "CSCI 2300"
-	"MATH 1010" -> "CSCI 2300"
-	"MATH 1020" -> "CSCI 2300"
-	"CSCI 1200" -> "CSCI 2600"
-	"CSCI 2200" -> "CSCI 2600"
-	"CSCI 2300" -> "CSCI 4430"
-	"CSCI 2600" -> "CSCI 4430"
-	"CSCI 2300" -> "CSCI 4210"
-	"CSCI 2500" -> "CSCI 4210"
+	"CSCI 1200" [label="Data Structures"]
+	"CSCI 2220" [label="Programming In Java"]
+	"CSCI 2230" [label="Programming In Perl"]
+	"CSCI 2940" [label="Readings In Csci"]
+	"CSCI 4150" [label="Introduction To Artificial Intelligence"]
+	"CSCI 4380" [label="Database Systems"]
+	"CSCI 4940" [label="Readings In Csci"]
+	"CSCI 9990" [label=Dissertation]
+	"CSCI 1100" [label="Computer Science I"]
+	"CSCI 2200" [label="Foundations Of Computer Sci"]
+	"CSCI 2210" [label="Programming In Lisp"]
+	"CSCI 2300" [label="Introduction To Algorithms"]
+	"CSCI 2400" [label="Models Of Computation"]
+	"CSCI 2500" [label="Computer Organization"]
+	"CSCI 2950" [label="Prog Web Based Agents Salsa"]
+	"CSCI 2960" [label="Web Systems Development"]
+	"CSCI 4000" [label="Intro To Oper Syst (exch)("]
+	"CSCI 4050" [label="Comput. & Complexity"]
+	"CSCI 4090" [label="Machine Learning"]
+	"CSCI 4210" [label="Operating Systems"]
+	"CSCI 4250" [label="Frontiers Of Network Science"]
+	"CSCI 4430" [label="Programming Languages"]
+	"CSCI 4800" [label="Numerical Computing"]
+	"CSCI 4960" [label="Machine Learning Seminar"]
+	"CSCI 2000" [label="Computer Organization"]
+	"CSCI 2961" [label="Rcos == 1 Credit"]
+	"CSCI 2962" [label="Lisp For Artificial Intel."]
+	"CSCI 2963" [label="Introduction To Open Source"]
+	"CSCI 4020" [label="Design And Analysis Of Algorithms"]
+	"CSCI 4220" [label="Network Programming"]
+	"CSCI 4320" [label="Parallel Programming"]
+	"CSCI 4961" [label="Network Resilience"]
+	"CSCI 4963" [label="Reinforcement Learning"]
+	"CSCI 4964" [label="Ai & Blockchain"]
+	"CSCI 4965" [label="Ai For Conservation"]
+	"CSCI 4966" [label="Economics And Computation"]
+	"CSCI 4967" [label="Projects In Ml And Ai"]
+	"CSCI 4962" [label="Ml And Optimization"]
+	"CSCI 1190" [label="Beginning Prog For Eng"]
+	"CSCI 4260" [label="Graph Theory"]
+	"CSCI 4820" [label="Intro To Num Meth For Diff Eq"]
+	"CSCI 1961" [label="Prob Solving In Csci"]
+	"CSCI 2003" [label="Database Management"]
+	"CSCI 2005" [label="Struc Prgrm & Ccomp Organ"]
+	"CSCI 4968" [label="Intermediate Formal Logic & Ai"]
+	"CSCI 2965" [label="Csci 1190 Program Mentor"]
+	"CSCI 4100" [label="Machine Learning From Data"]
+	"CSCI 4390" [label="Data Mining"]
+	"CSCI 4440" [label="Software Design & Documentatio"]
+	"CSCI 1010" [label="Intro To Computer Programming"]
+	"CSCI 4190" [label="Robotic Algorithms"]
+	"CSCI 4969" [label="Information Retrieval"]
+	"CSCI 4970" [label="Ai In Fiction And Fact"]
+	"CSCI 4971" [label="Ai And Blockchain"]
+	"CSCI 4972" [label="Intermediate Formal Logic & Ai"]
+	"CSCI 4290" [label="Robot Motion Planning"]
+	"CSCI 4600" [label="Data Analytics"]
+	"CSCI 1001" [label="Unix Oper System (hvcc)"]
+	"CSCI 1008" [label="Program Java (sccc)"]
+	"CSCI 4973" [label="Matl Informatics & Data Sci"]
+	"CSCI 4974" [label="Neurosymbolic Knowledge Graphs"]
+	"CSCI 4650" [label="Networking Laboratory I"]
+	"CSCI 4660" [label="Networking Laboratory II"]
+	"CSCI 4520" [label="Web Science Systems Develpment"]
+	"CSCI 4670" [label="Networking Security Laboratory"]
+	"CSCI 4975" [label="Deep Learning On Graphs"]
+	"CSCI 4480" [label="Robotics I"]
+	"CSCI 4490" [label="Robotics II"]
+	"CSCI 4530" [label="Advanced Computer Graphics"]
+	"CSCI 2001" [label="Structured Query Lang(at Hvcc)"]
+	"CSCI 2964" [label="Intro To Comp Prog Mentor 1010"]
+	"CSCI 4950" [label="Class2go Technology"]
+	"CSCI 4976" [label="Web Science Systems Dev"]
+	"CSCI 4977" [label="Network Resilience"]
+	"CSCI 4978" [label="Language Endowed Intell Agents"]
+	"CSCI 4979" [label="Computational Social Choice"]
+	"CSCI 1940" [label="Mentor Csci 1100"]
+	"CSCI 4400" [label=Xinformatics]
+	"CSCI 2600" [label="Principles Of Software"]
+	"CSCI 4230" [label="Cryptography And Network Security I"]
+	"CSCI 4350" [label="Data Science"]
+	"CSCI 4240" [label="Cryptography And Network Security II"]
+	"CSCI 4540" [label="Game Development II"]
+	"CSCI 4680" [label="Advanced Network Practicum"]
+	"CSCI 4941" [label="Campus Facilities Scheduler"]
+	"CSCI 4370" [label="Data And Society"]
+	"CSCI 4110" [label="Computational Social Processes"]
+	"CSCI 4500" [label="Dist Comp Over The Internet"]
+	"CSCI 4030" [label="Randomized Algorithms"]
+	"CSCI 4040" [label="Approximation Algorithms"]
+	"CSCI 4270" [label="Computational Vision"]
+	"CSCI 4510" [label="Dist Systems & Algorithms"]
+	"CSCI 4130" [label="Natural Language Processing"]
+	"CSCI 4450" [label="Principles Of Program Analysis"]
+	"CSCI 4550" [label="Interactive Visualization"]
+	"CSCI 4120" [label="Computational Finance"]
+	"CSCI 4340" [label=Ontologies]
+	"CSCI 2941" [label="Rcos-soul Engine"]
+	"CSCI 4310" [label="Networking In The Linux Kernel"]
+	"CSCI 4460" [label="Large Scale Program & Testing"]
+	"CSCI 4420" [label="Computability And Logic"]
+	"CSCI 4470" [label="Open Source Software"]
+	"CSCI 1960" [label="Mid-bridge"]
+	"CSCI 4560" [label="Computational Geometry"]
+	"CSCI 4850" [label="Modern Binary Exploitation"]
+	"CSCI 1700" [label="Early Introduction To Rcos"]
+	"CSCI 2700" [label="Introduction To Rcos"]
 	"BIOL 1015" -> "BIOL 1010"
 	"MATH 1010" -> "MATH 1020"
 	"LANG 1410" -> "LANG 2410"
@@ -48,4 +132,79 @@ digraph {
 	"LANG 1410" -> "LANG 4961"
 	"LANG 2410" -> "LANG 4961"
 	"LANG 4430" -> "LANG 4961"
+	"CSCI 1100" -> "CSCI 1200"
+	"CSCI 2300" -> "CSCI 4150"
+	"CSCI 2300" -> "CSCI 4380"
+	"CSCI 1200" -> "CSCI 2200"
+	"MATH 1010" -> "CSCI 2200"
+	"MATH 1020" -> "CSCI 2200"
+	"CSCI 1200" -> "CSCI 2300"
+	"CSCI 2200" -> "CSCI 2300"
+	"MATH 1010" -> "CSCI 2300"
+	"MATH 1020" -> "CSCI 2300"
+	"CSCI 1200" -> "CSCI 2500"
+	"CSCI 2300" -> "CSCI 4050"
+	"CSCI 2300" -> "CSCI 4210"
+	"CSCI 2500" -> "CSCI 4210"
+	"CSCI 2300" -> "CSCI 4250"
+	"CSCI 4020" -> "CSCI 4250"
+	"CSCI 4050" -> "CSCI 4250"
+	"CSCI 4260" -> "CSCI 4250"
+	"CSCI 4800" -> "CSCI 4250"
+	"CSCI 2300" -> "CSCI 4430"
+	"CSCI 2600" -> "CSCI 4430"
+	"CSCI 1100" -> "CSCI 2962"
+	"CSCI 1200" -> "CSCI 2962"
+	"CSCI 2300" -> "CSCI 4020"
+	"CSCI 4210" -> "CSCI 4220"
+	"CSCI 2300" -> "CSCI 4320"
+	"CSCI 2500" -> "CSCI 4320"
+	"CSCI 1100" -> "CSCI 4260"
+	"CSCI 1200" -> "CSCI 4260"
+	"CSCI 2200" -> "CSCI 4260"
+	"CSCI 4800" -> "CSCI 4820"
+	"CSCI 2300" -> "CSCI 4100"
+	"CSCI 2300" -> "CSCI 4390"
+	"CSCI 2300" -> "CSCI 4440"
+	"CSCI 4350" -> "CSCI 4600"
+	"CSCI 1200" -> "CSCI 4520"
+	"CSCI 4650" -> "CSCI 4670"
+	"CSCI 2300" -> "CSCI 4530"
+	"CSCI 2600" -> "CSCI 4530"
+	"CSCI 1200" -> "CSCI 4976"
+	"CSCI 2300" -> "CSCI 4977"
+	"CSCI 1200" -> "CSCI 4400"
+	"CSCI 4350" -> "CSCI 4400"
+	"CSCI 1200" -> "CSCI 2600"
+	"CSCI 2200" -> "CSCI 2600"
+	"CSCI 2300" -> "CSCI 4230"
+	"CSCI 1200" -> "CSCI 4350"
+	"CSCI 4380" -> "CSCI 4350"
+	"CSCI 4210" -> "CSCI 4240"
+	"CSCI 4230" -> "CSCI 4240"
+	"CSCI 4660" -> "CSCI 4680"
+	"CSCI 4350" -> "CSCI 4370"
+	"CSCI 2300" -> "CSCI 4110"
+	"CSCI 4210" -> "CSCI 4500"
+	"CSCI 4220" -> "CSCI 4500"
+	"CSCI 4430" -> "CSCI 4500"
+	"CSCI 4020" -> "CSCI 4030"
+	"CSCI 4020" -> "CSCI 4040"
+	"CSCI 2300" -> "CSCI 4270"
+	"CSCI 4210" -> "CSCI 4510"
+	"CSCI 2300" -> "CSCI 4130"
+	"CSCI 4430" -> "CSCI 4450"
+	"CSCI 2300" -> "CSCI 4550"
+	"CSCI 2600" -> "CSCI 4550"
+	"CSCI 2300" -> "CSCI 4120"
+	"CSCI 2300" -> "CSCI 4340"
+	"CSCI 4210" -> "CSCI 4310"
+	"CSCI 2600" -> "CSCI 4460"
+	"CSCI 2200" -> "CSCI 4420"
+	"CSCI 2300" -> "CSCI 4470"
+	"CSCI 2600" -> "CSCI 4470"
+	"CSCI 2300" -> "CSCI 4560"
+	"CSCI 2600" -> "CSCI 4560"
+	"CSCI 1100" -> "CSCI 1700"
+	"CSCI 1200" -> "CSCI 2700"
 }
