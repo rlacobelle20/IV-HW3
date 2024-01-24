@@ -12,11 +12,10 @@ digraph {
 	"BIOL 1015" [label="Intro to Biology Laboratory"]
 	"BIOL 1010" -> "BIOL 1015"
 	"PHYS 1100" [label="Physics I"]
-	SCIO [label="Science Option"]
+	SCIOP [label="Science Option"]
 	"MATH 1010" [label="Calculus I"]
 	"MATH 1020" [label="Calculus I"]
 	"MATH 1" [label="Mathematics Options I"]
-	"MATH 2" [label="Mathematics Options II"]
 	"CSCI 1100" -> "CSCI 1200"
 	"CSCI 1200" -> "CSCI 2200"
 	"MATH 1010" -> "CSCI 2200"
