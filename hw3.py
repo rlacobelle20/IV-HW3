@@ -157,12 +157,29 @@ def digraph(j_file):
 
 
 # required
-def bipartite():
+def bipartite(j_file):
     # professors --> only cs
     # classes
     # start with 2023 fall - 2024 spring
     # colors: teachers == blue, classes == red
     
+    data_202401, fp = parse(j_file[0])
+    #data_202309, fp1 = parse(j_file[1])
+
+    #dictionary with course as key and professor as value
+    # [course name, course id] = [list of professors]
+    course_dict = dict()
+    for c in data_202401[14]['courses']:
+        instructors = set()
+        for i in range(0,len(c['sections'])):
+          for timeslot in c['sections'][i]['timeslots']:
+            instructors.add(timeslot.get('instructor'))
+        course_dict[c['title'], c['id']]=instructors
+
+    print(course_dict)  
+
+
+
     return 
 
 # not required --> implement if time
@@ -170,3 +187,4 @@ def extra_credit():
     return
 
 digraph(['2024-BS-CSCI.json','prereq_graph.json'])
+bipartite(['courses.json'])
