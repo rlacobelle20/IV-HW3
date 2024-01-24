@@ -67,9 +67,9 @@ def digraph(j_file):
     node_name.append('Calculus I')
     
     # calc 2
-    dot.node('MATH 1020','Calculus I')
+    dot.node('MATH 1020','Calculus II')
     node_num.append('MATH 1020')
-    node_name.append('Calculus I')
+    node_name.append('Calculus II')
     
     # math elective 1
     dot.node('MATH 1', 'Mathematics Options I')
@@ -77,10 +77,43 @@ def digraph(j_file):
     node_name.append('Mathematics Options I')
     
     # math elective 2
-
+    dot.node('MATH 2', 'Mathematics Options II')
+    node_num.append('MATH 2')
+    node_name.append('Mathematics Options II')
     
-    # hass elective --> chinese pathway
-    # manually add all of chinese :)
+    # hass elective --> full chinese pathway
+    # chinese 1
+    dot.node('LANG 1410', 'CHINESE I')
+    node_num.append('LANG 1410')
+    node_name.append('CHINESE I')
+    
+    # chinese 2
+    dot.node('LANG 2410', 'CHINESE II')
+    node_num.append('LANG 2410')
+    node_name.append('CHINESE II')
+    
+    # chinese 3
+    dot.node('LANG 2420', 'CHINESE III')
+    node_num.append('LANG 2420')
+    node_name.append('CHINESE III')
+    
+    # chinese 4
+    dot.node('LANG 4430', 'CHINESE IV')
+    node_num.append('LANG 4430')
+    node_name.append('CHINESE IV')
+    
+    # chinese 5
+    dot.node('LANG 4470', 'CHINESE V')
+    node_num.append('LANG 4470')
+    node_name.append('CHINESE V')
+    
+    # chinese lang & culture in film
+    dot.node('LANG 4961', 'Chinese Lang & Culture In Film')
+    node_num.append('LANG 4961')
+    node_name.append('Chinese Lang & Culture In Film')
+    
+    edges.append(('LANG 2420','LANG 4961'))
+    dot.edge('LANG 2420','LANG 4961')
     
     # csci classes --> need course code
     

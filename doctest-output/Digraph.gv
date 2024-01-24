@@ -14,8 +14,16 @@ digraph {
 	"PHYS 1100" [label="Physics I"]
 	SCIOP [label="Science Option"]
 	"MATH 1010" [label="Calculus I"]
-	"MATH 1020" [label="Calculus I"]
+	"MATH 1020" [label="Calculus II"]
 	"MATH 1" [label="Mathematics Options I"]
+	"MATH 2" [label="Mathematics Options II"]
+	"LANG 1410" [label="CHINESE I"]
+	"LANG 2410" [label="CHINESE II"]
+	"LANG 2420" [label="CHINESE III"]
+	"LANG 4430" [label="CHINESE IV"]
+	"LANG 4470" [label="CHINESE V"]
+	"LANG 4961" [label="Chinese Lang & Culture In Film"]
+	"LANG 2420" -> "LANG 4961"
 	"CSCI 1100" -> "CSCI 1200"
 	"CSCI 1200" -> "CSCI 2200"
 	"MATH 1010" -> "CSCI 2200"
@@ -33,4 +41,11 @@ digraph {
 	"CSCI 2500" -> "CSCI 4210"
 	"BIOL 1015" -> "BIOL 1010"
 	"MATH 1010" -> "MATH 1020"
+	"LANG 1410" -> "LANG 2410"
+	"LANG 2410" -> "LANG 2420"
+	"LANG 2420" -> "LANG 4430"
+	"LANG 4430" -> "LANG 4470"
+	"LANG 1410" -> "LANG 4961"
+	"LANG 2410" -> "LANG 4961"
+	"LANG 4430" -> "LANG 4961"
 }
