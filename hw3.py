@@ -87,6 +87,17 @@ def digraph(j_file):
     # colors --> different for each concentration 
     # even out levels
     
+    # prereqs --> check if course exists before adding edge
+    prereqs = []
+    for num in node_num:
+        if len(num) >= 9:
+            prereqs = data_pre[num]['prereqs']
+            for i in prereqs:
+                # if the prereq is a node that exists
+                if i in node_num:
+                    dot.edge(i,num)
+                    edges.append((i,num))
+    
     # label: Code Name
     
     print(dot.source)
@@ -109,3 +120,5 @@ def bipartite():
 # not required --> implement if time
 def extra_credit():
     return
+
+digraph(['2024-BS-CSCI.json','prereq_graph.json'])
