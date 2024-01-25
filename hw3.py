@@ -186,20 +186,27 @@ def bipartite(j_file):
             split_list = (timeslot.get('instructor').split(', '))
             for prof in split_list:
               if(prof!="TBA" and prof!='Shianne M. Hulbert'):
-                instructors.add(prof)
-        course_dict[c['id'] + '\n' + c['title']]=instructors
+                if c['id'] + '\n' + c['title'] not in course_dict.keys():
+                  instructors.add(prof)
+                else:
+                  course_dict[c['id'] + '\n' + c['title']].add(prof)
+            if c['id'] + '\n' + c['title'] not in course_dict.keys():
+                course_dict[c['id'] + '\n' + c['title']]=instructors
+                
+        
+        #course_dict[c['id'] + '\n' + c['title']].add(instructors)
 
-    #print(course_dict)
+    print(course_dict)
 
     dot = graphviz.Graph()
     #dot.attr(layout='neato')
     for x in course_dict:
-      dot.node(x)
+      dot.node(x, color='blue')
       for prof in course_dict[x]:
-        dot.node(prof)
+        dot.node(prof, color='red')
         dot.edge(x, prof)
 
-    d=dot.unflatten(stagger=10)
+    d=dot.unflatten(stagger=20)
     d.view()
 
     dot.render(directory='doctest-output').replace('\\','/')
@@ -209,7 +216,6 @@ def bipartite(j_file):
 
 
     return
-
 
 # not required --> implement if time
 def extra_credit():
