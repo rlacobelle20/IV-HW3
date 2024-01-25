@@ -170,6 +170,7 @@ def bipartite(j_file):
     # [course id \n course name] = [list of professors]
     course_dict = dict()
     for c in data_202309[14]['courses']:
+      if c['id'][6]!='9' and c['id'][5]!='6':
         instructors = set()
         for i in range(0,len(c['sections'])):
           for timeslot in c['sections'][i]['timeslots']:
@@ -180,6 +181,7 @@ def bipartite(j_file):
         course_dict[c['id'] + '\n' + c['title']]=instructors
 
     for c in data_202401[14]['courses']:
+      if c['id'][6]!='9' and c['id'][5]!='6':
         instructors = set()
         for i in range(0,len(c['sections'])):
           for timeslot in c['sections'][i]['timeslots']:
