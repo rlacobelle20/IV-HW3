@@ -173,10 +173,13 @@ def bipartite(j_file):
         instructors = set()
         for i in range(0,len(c['sections'])):
           for timeslot in c['sections'][i]['timeslots']:
-            instructors.add(timeslot.get('instructor'))
+            split_list = (timeslot.get('instructor').split(', '))
+            for prof in split_list:
+              if(prof!="TBA" and prof!='Shianne M. Hulbert'):
+                instructors.add(prof)
         course_dict[c['title'], c['id']]=instructors
 
-    print(course_dict)  
+    #print(course_dict) 
 
 
 
