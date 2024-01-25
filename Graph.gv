@@ -1,0 +1,263 @@
+graph {
+	graph [scale=0.5];
+	"CSCI-1100
+Computer Science I"	[color=cornflowerblue,
+		style=filled];
+	"Uzma Mushtaque"	[color=pink,
+		style=filled];
+	"CSCI-1100
+Computer Science I" -- "Uzma Mushtaque"	[minlen=1];
+	"John Sturman"	[color=pink,
+		style=filled];
+	"CSCI-1100
+Computer Science I" -- "John Sturman";
+	"CSCI-1200
+Data Structures"	[color=cornflowerblue,
+		style=filled];
+	"Neha Keshan"	[color=pink,
+		style=filled];
+	"CSCI-1200
+Data Structures" -- "Neha Keshan";
+	"Jidong Xiao"	[color=pink,
+		style=filled];
+	"CSCI-1200
+Data Structures" -- "Jidong Xiao";
+	"CSCI-2200
+Foundations Of Computer Sci"	[color=cornflowerblue,
+		style=filled];
+	"Radoslav Svetlozarov Ivanov"	[color=pink,
+		style=filled];
+	"CSCI-2200
+Foundations Of Computer Sci" -- "Radoslav Svetlozarov Ivanov"	[minlen=1];
+	"Xiaoyang Liu"	[color=pink,
+		style=filled];
+	"CSCI-2200
+Foundations Of Computer Sci" -- "Xiaoyang Liu";
+	"David Eric Goldschmidt"	[color=pink,
+		style=filled];
+	"CSCI-2200
+Foundations Of Computer Sci" -- "David Eric Goldschmidt";
+	"CSCI-2300
+Introduction To Algorithms"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-2300
+Introduction To Algorithms" -- "Xiaoyang Liu";
+	"CSCI-2300
+Introduction To Algorithms" -- "David Eric Goldschmidt";
+	"Stacy Elizabeth Patterson"	[color=pink,
+		style=filled];
+	"CSCI-2300
+Introduction To Algorithms" -- "Stacy Elizabeth Patterson";
+	"CSCI-2500
+Computer Organization"	[color=cornflowerblue,
+		style=filled];
+	"Konstantin Kuzmin"	[color=pink,
+		style=filled];
+	"CSCI-2500
+Computer Organization" -- "Konstantin Kuzmin";
+	"Masoud Zarifneshat"	[color=pink,
+		style=filled];
+	"CSCI-2500
+Computer Organization" -- "Masoud Zarifneshat"	[minlen=1];
+	"CSCI-4100
+Machine Learning From Data"	[color=cornflowerblue,
+		style=filled];
+	"Malik Magdon-Ismail"	[color=pink,
+		style=filled];
+	"CSCI-4100
+Machine Learning From Data" -- "Malik Magdon-Ismail";
+	"CSCI-4220
+Network Programming"	[color=cornflowerblue,
+		style=filled];
+	"Lei Yu"	[color=pink,
+		style=filled];
+	"CSCI-4220
+Network Programming" -- "Lei Yu";
+	"CSCI-4250
+Frontiers Of Network Science"	[color=cornflowerblue,
+		style=filled];
+	"Boleslaw Szymanski"	[color=pink,
+		style=filled];
+	"CSCI-4250
+Frontiers Of Network Science" -- "Boleslaw Szymanski";
+	"CSCI-4350
+Data Science"	[color=cornflowerblue,
+		style=filled];
+	"Thilanka Munasinghe"	[color=pink,
+		style=filled];
+	"CSCI-4350
+Data Science" -- "Thilanka Munasinghe"	[minlen=1];
+	"CSCI-4380
+Database Systems"	[color=cornflowerblue,
+		style=filled];
+	"Sibel Adali"	[color=pink,
+		style=filled];
+	"CSCI-4380
+Database Systems" -- "Sibel Adali";
+	"CSCI-4390
+Data Mining"	[color=cornflowerblue,
+		style=filled];
+	"Mohammed J. Zaki"	[color=pink,
+		style=filled];
+	"CSCI-4390
+Data Mining" -- "Mohammed J. Zaki";
+	"CSCI-4430
+Programming Languages"	[color=cornflowerblue,
+		style=filled];
+	"Carlos A Varela"	[color=pink,
+		style=filled];
+	"CSCI-4430
+Programming Languages" -- "Carlos A Varela";
+	"CSCI-4440
+Software Design & Documentatio"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-4440
+Software Design & Documentatio" -- "John Sturman"	[minlen=1];
+	"CSCI-4480
+Robotics I"	[color=cornflowerblue,
+		style=filled];
+	"Kimberly Irene Oakes"	[color=pink,
+		style=filled];
+	"CSCI-4480
+Robotics I" -- "Kimberly Irene Oakes";
+	"CSCI-4560
+Computational Geometry"	[color=cornflowerblue,
+		style=filled];
+	"Barbara Cutler"	[color=pink,
+		style=filled];
+	"CSCI-4560
+Computational Geometry" -- "Barbara Cutler"	[minlen=1];
+	"CSCI-4600
+Data Analytics"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-4600
+Data Analytics" -- "Thilanka Munasinghe"	[minlen=2];
+	"CSCI-4800
+Numerical Computing"	[color=cornflowerblue,
+		style=filled];
+	"Mark H Holmes"	[color=pink,
+		style=filled];
+	"CSCI-4800
+Numerical Computing" -- "Mark H Holmes"	[minlen=1];
+	"Yuri V Lvov"	[color=pink,
+		style=filled];
+	"CSCI-4800
+Numerical Computing" -- "Yuri V Lvov"	[minlen=2];
+	"CSCI-4850
+Modern Binary Exploitation"	[color=cornflowerblue,
+		style=filled];
+	"Ana L. Milanova"	[color=pink,
+		style=filled];
+	"CSCI-4850
+Modern Binary Exploitation" -- "Ana L. Milanova"	[minlen=1];
+	"CSCI-1700
+Early Introduction To Rcos"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-1700
+Early Introduction To Rcos" -- "Neha Keshan";
+	"CSCI-1700
+Early Introduction To Rcos" -- "Jidong Xiao";
+	"CSCI-1700
+Early Introduction To Rcos" -- "Xiaoyang Liu";
+	"Wesley D Turner"	[color=pink,
+		style=filled];
+	"CSCI-1700
+Early Introduction To Rcos" -- "Wesley D Turner";
+	"CSCI-2600
+Principles Of Software"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-2600
+Principles Of Software" -- "Konstantin Kuzmin"	[minlen=1];
+	"CSCI-2700
+Introduction To Rcos"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-2700
+Introduction To Rcos" -- "Neha Keshan";
+	"CSCI-2700
+Introduction To Rcos" -- "Jidong Xiao";
+	"CSCI-2700
+Introduction To Rcos" -- "Xiaoyang Liu";
+	"CSCI-2700
+Introduction To Rcos" -- "Wesley D Turner";
+	"CSCI-4020
+Design And Analysis Of Algorithms"	[color=cornflowerblue,
+		style=filled];
+	"Elliot I. Anshelevich"	[color=pink,
+		style=filled];
+	"CSCI-4020
+Design And Analysis Of Algorithms" -- "Elliot I. Anshelevich";
+	"CSCI-4150
+Introduction To Artificial Intelligence"	[color=cornflowerblue,
+		style=filled];
+	"Lirong Xia"	[color=pink,
+		style=filled];
+	"CSCI-4150
+Introduction To Artificial Intelligence" -- "Lirong Xia";
+	"CSCI-4210
+Csci 4210 Operating Systems"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-4210
+Csci 4210 Operating Systems" -- "Wesley D Turner"	[minlen=1];
+	"CSCI-4230
+Cryptography And Network Security I"	[color=cornflowerblue,
+		style=filled];
+	"Bulent Yener"	[color=pink,
+		style=filled];
+	"CSCI-4230
+Cryptography And Network Security I" -- "Bulent Yener";
+	"CSCI-4260
+Graph Theory"	[color=cornflowerblue,
+		style=filled];
+	"George M. Slota"	[color=pink,
+		style=filled];
+	"CSCI-4260
+Graph Theory" -- "George M. Slota";
+	"CSCI-4270
+Computational Vision"	[color=cornflowerblue,
+		style=filled];
+	"Charles V Stewart"	[color=pink,
+		style=filled];
+	"CSCI-4270
+Computational Vision" -- "Charles V Stewart";
+	"CSCI-4320
+Parallel Programming"	[color=cornflowerblue,
+		style=filled];
+	"Christopher D. Carothers"	[color=pink,
+		style=filled];
+	"CSCI-4320
+Parallel Programming" -- "Christopher D. Carothers";
+	"CSCI-4400
+Xinformatics"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-4400
+Xinformatics" -- "Thilanka Munasinghe"	[minlen=3];
+	"CSCI-4450
+Principles Of Program Analysis"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-4450
+Principles Of Program Analysis" -- "Ana L. Milanova"	[minlen=2];
+	"CSCI-4510
+Dist Systems & Algorithms"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-4510
+Dist Systems & Algorithms" -- "Stacy Elizabeth Patterson"	[minlen=1];
+	"CSCI-4520
+Web Science Systems Develpment"	[color=cornflowerblue,
+		style=filled];
+	"Brian Robert Callahan"	[color=pink,
+		style=filled];
+	"CSCI-4520
+Web Science Systems Develpment" -- "Brian Robert Callahan";
+	"CSCI-4550
+Interactive Visualization"	[color=cornflowerblue,
+		style=filled];
+	"CSCI-4550
+Interactive Visualization" -- "Barbara Cutler"	[minlen=2];
+	"CSCI-4820
+Intro To Num Meth For Diff Eq"	[color=cornflowerblue,
+		style=filled];
+	"William Douglas Henshaw"	[color=pink,
+		style=filled];
+	"CSCI-4820
+Intro To Num Meth For Diff Eq" -- "William Douglas Henshaw";
+}

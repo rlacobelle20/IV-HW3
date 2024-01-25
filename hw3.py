@@ -24,31 +24,38 @@ def digraph(j_file):
     node_num = [] # holds course number
     node_name = [] # holds course name
     edges = [] # holds all prereq data
+    req_data = dict() # holds requirement data
     
+    req_data['major_req'] = [] #contains a list of major required elemets
     
     # add CS1
     dot.node('CSCI 1100','Computer Science I')
     node_num.append('CSCI 1100')
     node_name.append('Computer Science I')
-    
+    req_data['major_req'].append('CSCI 1100')
     
     # major required
+    
     for i in range(7):
         course = data_csci[4]['rules'][0]['rule_data']['rules'][i]['rule_data']['courses'][0]['dept'] + ' ' + data_csci[4]['rules'][0]['rule_data']['rules'][i]['rule_data']['courses'][0]['crse']
         dot.node(course,data_csci[4]['rules'][0]['rule_data']['rules'][i]['label'])
         node_num.append(course)
         node_name.append(data_csci[4]['rules'][0]['rule_data']['rules'][i]['label'])
-    
+        req_data['major_req'].append(course)
 
     # math/science core
+    req_data['math_sci'] = []
+    
     # intro to bio/intro to bio lab
     dot.node('BIOL 1010','Intro to Biology')
     node_num.append('BIOL 1010')
     node_name.append('Intro to Biology')
+    req_data['math_sci'].append('BIOL 1010')
     
     dot.node('BIOL 1015','Intro to Biology Laboratory')
     node_num.append('BIOL 1015')
     node_name.append('Intro to Biology Laboratory')
+    req_data['math_sci'].append('BIOL 1015')
     
     edges.append(('BIOL 1015','BIOL 1010'))
     dot.edge('BIOL 1010','BIOL 1015')
@@ -57,97 +64,130 @@ def digraph(j_file):
     dot.node('PHYS 1100','Physics I')
     node_num.append('PHYS 1100')
     node_name.append('Physics I')
+    req_data['math_sci'].append('PHYS 1100')
     
     # science elective
     dot.node('SCIOP', 'Science Option')
     node_num.append('SCIOP')
     node_name.append('Science Option')
+    req_data['math_sci'].append('SCIOP')
     
     # calc 1
     dot.node('MATH 1010','Calculus I')
     node_num.append('MATH 1010')
     node_name.append('Calculus I')
+    req_data['math_sci'].append('MATH 1010')
     
     # calc 2
     dot.node('MATH 1020','Calculus II')
     node_num.append('MATH 1020')
     node_name.append('Calculus II')
+    req_data['math_sci'].append('MATH 1020')
     
     # math elective 1
     dot.node('MATH 1', 'Mathematics Options I')
     node_num.append('MATH 1')
     node_name.append('Mathematics Options I')
+    req_data['major_req'].append('MATH 1')
     
     # math elective 2
     dot.node('MATH 2', 'Mathematics Options II')
     node_num.append('MATH 2')
     node_name.append('Mathematics Options II')
+    req_data['major_req'].append('MATH 2')
     
     # hass elective --> full chinese pathway
+    req_data['chinese'] = []
+    
     # chinese 1
     dot.node('LANG 1410', 'CHINESE I')
     node_num.append('LANG 1410')
     node_name.append('CHINESE I')
+    req_data['chinese'].append('LANG 1410')
     
     # chinese 2
     dot.node('LANG 2410', 'CHINESE II')
     node_num.append('LANG 2410')
     node_name.append('CHINESE II')
+    req_data['chinese'].append('LANG 2410')
     
     # chinese 3
     dot.node('LANG 2420', 'CHINESE III')
     node_num.append('LANG 2420')
     node_name.append('CHINESE III')
+    req_data['chinese'].append('LANG 2420')
     
     # chinese 4
     dot.node('LANG 4430', 'CHINESE IV')
     node_num.append('LANG 4430')
     node_name.append('CHINESE IV')
+    req_data['chinese'].append('LANG 4430')
     
     # chinese 5
     dot.node('LANG 4470', 'CHINESE V')
     node_num.append('LANG 4470')
     node_name.append('CHINESE V')
+    req_data['chinese'].append('LANG 4470')
     
     # chinese lang & culture in film
     dot.node('LANG 4961', 'Chinese Lang & Culture In Film')
     node_num.append('LANG 4961')
     node_name.append('Chinese Lang & Culture In Film')
+    req_data['chinese'].append('LANG 4961')
     
     edges.append(('LANG 2420','LANG 4961'))
     dot.edge('LANG 2420','LANG 4961')
+    
+    # chinese calligraphy
+    dot.node('LANG 4960', 'Chinese Calligraphy')
+    node_num.append('LANG 4960')
+    node_name.append('Chinese Calligraphy')
+    req_data['chinese'].append('LANG 4960')
+    
+    edges.append(('LANG 2420','LANG 4960'))
+    dot.edge('LANG 2420','LANG 4960')
     
     # csci classes --> need course code
     # don't do grad classes, no repeats
     # [key for key, value in keyValue.items() if value > 60]
     csci_pre = [k for k in data_pre.keys() if "CSCI" in k]
     
+    req_data['csci'] = [] # holds all csci courses with prereqs
+    prereqs = [] # prereqs --> check if course exists before adding edge
     for i in csci_pre:
         # do not use grad classes
         if i[5] != "6":
-            # dont add if node already exists
-            if i not in node_num:
-                dot.node(i,data_pre[i]['title'])
-                node_num.append(i)
-                node_name.append(data_pre[i]['title'])
-    
-    # colors --> different for each concentration 
+            prereqs = data_pre[i]['prereqs']
+            
+            if len(prereqs) > 0:
+                # dont add if node already exists
+                if i not in node_num:
+                    node_num.append(i)
+                    node_name.append(data_pre[i]['title'])
+
     # even out levels
     
-    # prereqs --> check if course exists before adding edge
-    prereqs = []
     for num in node_num:
         if len(num) >= 9:
             prereqs = data_pre[num]['prereqs']
-            for i in prereqs:
-                # if the prereq is a node that exists
-                if i in node_num:
-                    dot.edge(i,num)
-                    edges.append((i,num))
-    
+            # only adds node if prereq exists
+            if len(prereqs) > 0:
+                for i in prereqs:
+                    if i in node_num and (i,num) not in edges:
+                        dot.node(num,data_pre[num]['title'])
+                        dot.edge(i,num)
+                        edges.append((i,num))
+        
     # label: Code Name
     
-    # print(dot.source)
+    #print(dot.source)
+    # colors nodes
+    for i in req_data['major_req']:
+        dot.node(i, color= 'cornflowerblue', style='filled')
+    for i in req_data['math_sci']:
+        dot.node(i, color= 'green', style='filled')
+    for i in req_data['chinese']:
+        dot.node(i, color= 'orange', style='filled')
     
     dot.render(directory='doctest-output').replace('\\','/')
     dot.render(directory='doctest-output', view=True) 
