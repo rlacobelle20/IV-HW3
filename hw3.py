@@ -203,9 +203,9 @@ def bipartite(j_file):
     dot = graphviz.Graph()
     #dot.attr(layout='neato')
     for x in course_dict:
-      dot.node(x, color='blue')
+      dot.node(x, color= 'cornflowerblue', style='filled')
       for prof in course_dict[x]:
-        dot.node(prof, color='red')
+        dot.node(prof, color='pink', style='filled')
         dot.edge(x, prof)
 
     d=dot.unflatten(stagger=20)
