@@ -162,13 +162,23 @@ def bipartite(j_file):
     # classes
     # start with 2023 fall - 2024 spring
     # colors: teachers == blue, classes == red
-    
-    data_202401, fp = parse(j_file[0])
-    #data_202309, fp1 = parse(j_file[1])
+
+    data_202309, fp = parse(j_file[0])
+    data_202401, fp1 = parse(j_file[1])
 
     #dictionary with course as key and professor as value
-    # [course name, course id] = [list of professors]
+    # [course id \n course name] = [list of professors]
     course_dict = dict()
+    for c in data_202309[14]['courses']:
+        instructors = set()
+        for i in range(0,len(c['sections'])):
+          for timeslot in c['sections'][i]['timeslots']:
+            split_list = (timeslot.get('instructor').split(', '))
+            for prof in split_list:
+              if(prof!="TBA" and prof!='Shianne M. Hulbert'):
+                instructors.add(prof)
+        course_dict[c['id'] + '\n' + c['title']]=instructors
+
     for c in data_202401[14]['courses']:
         instructors = set()
         for i in range(0,len(c['sections'])):
@@ -177,17 +187,33 @@ def bipartite(j_file):
             for prof in split_list:
               if(prof!="TBA" and prof!='Shianne M. Hulbert'):
                 instructors.add(prof)
-        course_dict[c['title'], c['id']]=instructors
+        course_dict[c['id'] + '\n' + c['title']]=instructors
 
-    #print(course_dict) 
+    #print(course_dict)
+
+    dot = graphviz.Graph()
+    #dot.attr(layout='neato')
+    for x in course_dict:
+      dot.node(x)
+      for prof in course_dict[x]:
+        dot.node(prof)
+        dot.edge(x, prof)
+
+    d=dot.unflatten(stagger=10)
+    d.view()
+
+    dot.render(directory='doctest-output').replace('\\','/')
+    dot.render(directory='doctest-output', view=True)
+    fp.close()
+    fp1.close()
 
 
+    return
 
-    return 
 
 # not required --> implement if time
 def extra_credit():
     return
 
 digraph(['2024-BS-CSCI.json','prereq_graph.json'])
-bipartite(['courses.json'])
+bipartite(['courses.json', 'courses24.json'])
