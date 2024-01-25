@@ -200,7 +200,7 @@ def bipartite(j_file):
 
     print(course_dict)
 
-    dot = graphviz.Graph()
+    dot = graphviz.Graph(engine='circo', graph_attr={'scale': '0.5'})
     #dot.attr(layout='neato')
     for x in course_dict:
       dot.node(x, color= 'cornflowerblue', style='filled')
