@@ -1,5 +1,6 @@
 // CSCI 2024 Template
 digraph {
+	graph [scale=4.0]
 	"CSCI 1100" [label="Computer Science I"]
 	"CSCI 1200" [label="Data Structures"]
 	"CSCI 2200" [label="Foundations of Computer Science"]
@@ -15,13 +16,18 @@ digraph {
 	SCIOP [label="Science Option"]
 	"MATH 1010" [label="Calculus I"]
 	"MATH 1020" [label="Calculus II"]
+	"MATH 1010" -> "MATH 1020"
 	"MATH 1" [label="Mathematics Options I"]
 	"MATH 2" [label="Mathematics Options II"]
 	"LANG 1410" [label="CHINESE I"]
 	"LANG 2410" [label="CHINESE II"]
+	"LANG 1410" -> "LANG 2410"
 	"LANG 2420" [label="CHINESE III"]
+	"LANG 2410" -> "LANG 2420"
 	"LANG 4430" [label="CHINESE IV"]
+	"LANG 2420" -> "LANG 4430"
 	"LANG 4470" [label="CHINESE V"]
+	"LANG 4430" -> "LANG 4470"
 	"LANG 4961" [label="Chinese Lang & Culture In Film"]
 	"LANG 2420" -> "LANG 4961"
 	"LANG 4960" [label="Chinese Calligraphy"]
@@ -30,24 +36,12 @@ digraph {
 	"CSCI 1100" -> "CSCI 1200"
 	"CSCI 2200" [label="Foundations Of Computer Sci"]
 	"CSCI 1200" -> "CSCI 2200"
-	"CSCI 2200" [label="Foundations Of Computer Sci"]
-	"MATH 1010" -> "CSCI 2200"
-	"CSCI 2200" [label="Foundations Of Computer Sci"]
-	"MATH 1020" -> "CSCI 2200"
 	"CSCI 2500" [label="Computer Organization"]
 	"CSCI 1200" -> "CSCI 2500"
 	"CSCI 2300" [label="Introduction To Algorithms"]
 	"CSCI 1200" -> "CSCI 2300"
-	"CSCI 2300" [label="Introduction To Algorithms"]
-	"CSCI 2200" -> "CSCI 2300"
-	"CSCI 2300" [label="Introduction To Algorithms"]
-	"MATH 1010" -> "CSCI 2300"
-	"CSCI 2300" [label="Introduction To Algorithms"]
-	"MATH 1020" -> "CSCI 2300"
 	"CSCI 2600" [label="Principles Of Software"]
 	"CSCI 1200" -> "CSCI 2600"
-	"CSCI 2600" [label="Principles Of Software"]
-	"CSCI 2200" -> "CSCI 2600"
 	"CSCI 4430" [label="Programming Languages"]
 	"CSCI 2300" -> "CSCI 4430"
 	"CSCI 4430" [label="Programming Languages"]
@@ -56,22 +50,6 @@ digraph {
 	"CSCI 2300" -> "CSCI 4210"
 	"CSCI 4210" [label="Operating Systems"]
 	"CSCI 2500" -> "CSCI 4210"
-	"MATH 1020" [label="Calculus II"]
-	"MATH 1010" -> "MATH 1020"
-	"LANG 2410" [label="Chinese II"]
-	"LANG 1410" -> "LANG 2410"
-	"LANG 2420" [label="Chinese III"]
-	"LANG 2410" -> "LANG 2420"
-	"LANG 4430" [label="Chinese Iv"]
-	"LANG 2420" -> "LANG 4430"
-	"LANG 4470" [label="Chinese V"]
-	"LANG 4430" -> "LANG 4470"
-	"LANG 4961" [label="Chinese Lang & Culture In Film"]
-	"LANG 1410" -> "LANG 4961"
-	"LANG 4961" [label="Chinese Lang & Culture In Film"]
-	"LANG 2410" -> "LANG 4961"
-	"LANG 4961" [label="Chinese Lang & Culture In Film"]
-	"LANG 4430" -> "LANG 4961"
 	"CSCI 4150" [label="Introduction To Artificial Intelligence"]
 	"CSCI 2300" -> "CSCI 4150"
 	"CSCI 4380" [label="Database Systems"]
@@ -81,17 +59,11 @@ digraph {
 	"CSCI 4250" [label="Frontiers Of Network Science"]
 	"CSCI 2300" -> "CSCI 4250"
 	"CSCI 4250" [label="Frontiers Of Network Science"]
-	"CSCI 4020" -> "CSCI 4250"
-	"CSCI 4250" [label="Frontiers Of Network Science"]
-	"CSCI 4050" -> "CSCI 4250"
-	"CSCI 4250" [label="Frontiers Of Network Science"]
 	"CSCI 4260" -> "CSCI 4250"
 	"CSCI 4250" [label="Frontiers Of Network Science"]
 	"CSCI 4800" -> "CSCI 4250"
 	"CSCI 2962" [label="Lisp For Artificial Intel."]
 	"CSCI 1100" -> "CSCI 2962"
-	"CSCI 2962" [label="Lisp For Artificial Intel."]
-	"CSCI 1200" -> "CSCI 2962"
 	"CSCI 4020" [label="Design And Analysis Of Algorithms"]
 	"CSCI 2300" -> "CSCI 4020"
 	"CSCI 4220" [label="Network Programming"]
@@ -102,10 +74,6 @@ digraph {
 	"CSCI 2500" -> "CSCI 4320"
 	"CSCI 4260" [label="Graph Theory"]
 	"CSCI 1100" -> "CSCI 4260"
-	"CSCI 4260" [label="Graph Theory"]
-	"CSCI 1200" -> "CSCI 4260"
-	"CSCI 4260" [label="Graph Theory"]
-	"CSCI 2200" -> "CSCI 4260"
 	"CSCI 4820" [label="Intro To Num Meth For Diff Eq"]
 	"CSCI 4800" -> "CSCI 4820"
 	"CSCI 4100" [label="Machine Learning From Data"]
@@ -128,8 +96,6 @@ digraph {
 	"CSCI 2300" -> "CSCI 4977"
 	"CSCI 4400" [label=Xinformatics]
 	"CSCI 1200" -> "CSCI 4400"
-	"CSCI 4400" [label=Xinformatics]
-	"CSCI 4350" -> "CSCI 4400"
 	"CSCI 4230" [label="Cryptography And Network Security I"]
 	"CSCI 2300" -> "CSCI 4230"
 	"CSCI 4350" [label="Data Science"]
@@ -146,8 +112,6 @@ digraph {
 	"CSCI 2300" -> "CSCI 4110"
 	"CSCI 4500" [label="Dist Comp Over The Internet"]
 	"CSCI 4210" -> "CSCI 4500"
-	"CSCI 4500" [label="Dist Comp Over The Internet"]
-	"CSCI 4220" -> "CSCI 4500"
 	"CSCI 4500" [label="Dist Comp Over The Internet"]
 	"CSCI 4430" -> "CSCI 4500"
 	"CSCI 4030" [label="Randomized Algorithms"]

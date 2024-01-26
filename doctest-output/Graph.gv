@@ -2,12 +2,12 @@ graph {
 	graph [scale=0.5]
 	"CSCI-1100
 Computer Science I" [color=cornflowerblue style=filled]
-	"Uzma Mushtaque" [color=pink style=filled]
-	"CSCI-1100
-Computer Science I" -- "Uzma Mushtaque"
 	"John Sturman" [color=pink style=filled]
 	"CSCI-1100
 Computer Science I" -- "John Sturman"
+	"Uzma Mushtaque" [color=pink style=filled]
+	"CSCI-1100
+Computer Science I" -- "Uzma Mushtaque"
 	"CSCI-1200
 Data Structures" [color=cornflowerblue style=filled]
 	"Neha Keshan" [color=pink style=filled]
@@ -18,26 +18,26 @@ Data Structures" -- "Neha Keshan"
 Data Structures" -- "Jidong Xiao"
 	"CSCI-2200
 Foundations Of Computer Sci" [color=cornflowerblue style=filled]
-	"Radoslav Svetlozarov Ivanov" [color=pink style=filled]
-	"CSCI-2200
-Foundations Of Computer Sci" -- "Radoslav Svetlozarov Ivanov"
 	"Xiaoyang Liu" [color=pink style=filled]
 	"CSCI-2200
 Foundations Of Computer Sci" -- "Xiaoyang Liu"
+	"Radoslav Svetlozarov Ivanov" [color=pink style=filled]
+	"CSCI-2200
+Foundations Of Computer Sci" -- "Radoslav Svetlozarov Ivanov"
 	"David Eric Goldschmidt" [color=pink style=filled]
 	"CSCI-2200
 Foundations Of Computer Sci" -- "David Eric Goldschmidt"
 	"CSCI-2300
 Introduction To Algorithms" [color=cornflowerblue style=filled]
-	"Xiaoyang Liu" [color=pink style=filled]
-	"CSCI-2300
-Introduction To Algorithms" -- "Xiaoyang Liu"
 	"Stacy Elizabeth Patterson" [color=pink style=filled]
 	"CSCI-2300
 Introduction To Algorithms" -- "Stacy Elizabeth Patterson"
 	"David Eric Goldschmidt" [color=pink style=filled]
 	"CSCI-2300
 Introduction To Algorithms" -- "David Eric Goldschmidt"
+	"Xiaoyang Liu" [color=pink style=filled]
+	"CSCI-2300
+Introduction To Algorithms" -- "Xiaoyang Liu"
 	"CSCI-2500
 Computer Organization" [color=cornflowerblue style=filled]
 	"Konstantin Kuzmin" [color=pink style=filled]
@@ -103,12 +103,12 @@ Data Analytics" [color=cornflowerblue style=filled]
 Data Analytics" -- "Thilanka Munasinghe"
 	"CSCI-4800
 Numerical Computing" [color=cornflowerblue style=filled]
-	"Mark H Holmes" [color=pink style=filled]
-	"CSCI-4800
-Numerical Computing" -- "Mark H Holmes"
 	"Yuri V Lvov" [color=pink style=filled]
 	"CSCI-4800
 Numerical Computing" -- "Yuri V Lvov"
+	"Mark H Holmes" [color=pink style=filled]
+	"CSCI-4800
+Numerical Computing" -- "Mark H Holmes"
 	"CSCI-4850
 Modern Binary Exploitation" [color=cornflowerblue style=filled]
 	"Ana L. Milanova" [color=pink style=filled]
@@ -116,15 +116,15 @@ Modern Binary Exploitation" [color=cornflowerblue style=filled]
 Modern Binary Exploitation" -- "Ana L. Milanova"
 	"CSCI-1700
 Early Introduction To Rcos" [color=cornflowerblue style=filled]
+	"Xiaoyang Liu" [color=pink style=filled]
+	"CSCI-1700
+Early Introduction To Rcos" -- "Xiaoyang Liu"
 	"Neha Keshan" [color=pink style=filled]
 	"CSCI-1700
 Early Introduction To Rcos" -- "Neha Keshan"
 	"Wesley D Turner" [color=pink style=filled]
 	"CSCI-1700
 Early Introduction To Rcos" -- "Wesley D Turner"
-	"Xiaoyang Liu" [color=pink style=filled]
-	"CSCI-1700
-Early Introduction To Rcos" -- "Xiaoyang Liu"
 	"Jidong Xiao" [color=pink style=filled]
 	"CSCI-1700
 Early Introduction To Rcos" -- "Jidong Xiao"
@@ -135,15 +135,15 @@ Principles Of Software" [color=cornflowerblue style=filled]
 Principles Of Software" -- "Konstantin Kuzmin"
 	"CSCI-2700
 Introduction To Rcos" [color=cornflowerblue style=filled]
+	"Xiaoyang Liu" [color=pink style=filled]
+	"CSCI-2700
+Introduction To Rcos" -- "Xiaoyang Liu"
 	"Neha Keshan" [color=pink style=filled]
 	"CSCI-2700
 Introduction To Rcos" -- "Neha Keshan"
 	"Wesley D Turner" [color=pink style=filled]
 	"CSCI-2700
 Introduction To Rcos" -- "Wesley D Turner"
-	"Xiaoyang Liu" [color=pink style=filled]
-	"CSCI-2700
-Introduction To Rcos" -- "Xiaoyang Liu"
 	"Jidong Xiao" [color=pink style=filled]
 	"CSCI-2700
 Introduction To Rcos" -- "Jidong Xiao"

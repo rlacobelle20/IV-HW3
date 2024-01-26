@@ -7,16 +7,19 @@ def parse(j_file):
     data = json.load(fp) # returns json file as dicttionary
     return data, fp
 
+# checks if common ancestor
+def check_ancestor(ancestor, parent, child):
+    for i in ancestor[parent]:
+        for j in ancestor[child]:
+            if i in j:
+                return True
+    return False
+
 # required
 def digraph(j_file):
-    
-    dot = graphviz.Digraph(comment='CSCI 2024 Template')
-    
-    # data[0]= comm-intensive requirements
-    # data[1]= math core 
-    # data[2]= humanities arts and social sciences
-    # data[3]= depth requirement 
-    # data[4]= cs major requirements (9)
+    #(engine='circo', graph_attr={'scale': '0.5'})
+    dot = graphviz.Digraph(engine='neato', graph_attr={'scale': '4.0'},comment='CSCI 2024 Template')
+
     data_csci,fp = parse(j_file[0]) # parse csci bs data
     data_pre, fp1 = parse(j_file[1]) # parse prereq data
     
@@ -33,6 +36,7 @@ def digraph(j_file):
     node_num.append('CSCI 1100')
     node_name.append('Computer Science I')
     req_data['major_req'].append('CSCI 1100')
+    ancestor = dict() # holds all ancestors for any given node --> used to not add too many edges
     
     # major required
     
@@ -42,6 +46,7 @@ def digraph(j_file):
         node_num.append(course)
         node_name.append(data_csci[4]['rules'][0]['rule_data']['rules'][i]['label'])
         req_data['major_req'].append(course)
+        ancestor[course] = data_pre[course]['prereqs']
 
     # math/science core
     req_data['math_sci'] = []
@@ -77,12 +82,17 @@ def digraph(j_file):
     node_num.append('MATH 1010')
     node_name.append('Calculus I')
     req_data['math_sci'].append('MATH 1010')
+    ancestor['MATH 1010'] = data_pre['MATH 1010']['prereqs']
     
     # calc 2
     dot.node('MATH 1020','Calculus II')
     node_num.append('MATH 1020')
     node_name.append('Calculus II')
     req_data['math_sci'].append('MATH 1020')
+    ancestor['MATH 1020'] = data_pre['MATH 1020']['prereqs']
+    
+    edges.append(('MATH 1010','MATH 1020'))
+    dot.edge('MATH 1010','MATH 1020')
     
     # math elective 1
     dot.node('MATH 1', 'Mathematics Options I')
@@ -111,11 +121,17 @@ def digraph(j_file):
     node_name.append('CHINESE II')
     req_data['chinese'].append('LANG 2410')
     
+    edges.append(('LANG 1410','LANG 2410'))
+    dot.edge('LANG 1410','LANG 2410')
+    
     # chinese 3
     dot.node('LANG 2420', 'CHINESE III')
     node_num.append('LANG 2420')
     node_name.append('CHINESE III')
     req_data['chinese'].append('LANG 2420')
+    
+    edges.append(('LANG 2410','LANG 2420'))
+    dot.edge('LANG 2410','LANG 2420')
     
     # chinese 4
     dot.node('LANG 4430', 'CHINESE IV')
@@ -123,11 +139,17 @@ def digraph(j_file):
     node_name.append('CHINESE IV')
     req_data['chinese'].append('LANG 4430')
     
+    edges.append(('LANG 2420','LANG 4430'))
+    dot.edge('LANG 2420','LANG 4430')
+    
     # chinese 5
     dot.node('LANG 4470', 'CHINESE V')
     node_num.append('LANG 4470')
     node_name.append('CHINESE V')
     req_data['chinese'].append('LANG 4470')
+    
+    edges.append(('LANG 4430','LANG 4470'))
+    dot.edge('LANG 4430','LANG 4470')
     
     # chinese lang & culture in film
     dot.node('LANG 4961', 'Chinese Lang & Culture In Film')
@@ -154,11 +176,13 @@ def digraph(j_file):
     
     req_data['csci'] = [] # holds all csci courses with prereqs
     prereqs = [] # prereqs --> check if course exists before adding edge
+    
     for i in csci_pre:
         # do not use grad classes
         if i[5] != "6":
             prereqs = data_pre[i]['prereqs']
-            
+            ancestor[i] = [k for k in data_pre[i]['prereqs'] if "CSCI" in k]
+            # data_pre[i]['prereqs']
             if len(prereqs) > 0:
                 # dont add if node already exists
                 if i not in node_num:
@@ -166,19 +190,25 @@ def digraph(j_file):
                     node_name.append(data_pre[i]['title'])
 
     # even out levels
-    
+    data_pre = dict(sorted(data_pre.items()))
+
     for num in node_num:
         if len(num) >= 9:
-            prereqs = data_pre[num]['prereqs']
+            prereqs = [k for k in data_pre[num]['prereqs'] if "CSCI" in k]
             # only adds node if prereq exists
             if len(prereqs) > 0:
                 for i in prereqs:
-                    if i in node_num and (i,num) not in edges:
-                        dot.node(num,data_pre[num]['title'])
-                        dot.edge(i,num)
-                        edges.append((i,num))
+                    # do not edges with same ancestor that connect multiple times
+                    # ancestor[i]
+                    run = check_ancestor(ancestor,i,num) 
+                    if run == False:
+                        if i in node_num and (i,num) not in edges:
+                            dot.node(num,data_pre[num]['title'])
+                            dot.edge(i,num)
+                            edges.append((i,num))
         
     # label: Code Name
+    # even out edges
     
     #print(dot.source)
     # colors nodes

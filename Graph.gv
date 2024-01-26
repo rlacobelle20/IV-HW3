@@ -3,14 +3,14 @@ graph {
 	"CSCI-1100
 Computer Science I"	[color=cornflowerblue,
 		style=filled];
-	"Uzma Mushtaque"	[color=pink,
-		style=filled];
-	"CSCI-1100
-Computer Science I" -- "Uzma Mushtaque"	[minlen=1];
 	"John Sturman"	[color=pink,
 		style=filled];
 	"CSCI-1100
 Computer Science I" -- "John Sturman";
+	"Uzma Mushtaque"	[color=pink,
+		style=filled];
+	"CSCI-1100
+Computer Science I" -- "Uzma Mushtaque"	[minlen=1];
 	"CSCI-1200
 Data Structures"	[color=cornflowerblue,
 		style=filled];
@@ -25,14 +25,14 @@ Data Structures" -- "Jidong Xiao";
 	"CSCI-2200
 Foundations Of Computer Sci"	[color=cornflowerblue,
 		style=filled];
-	"Radoslav Svetlozarov Ivanov"	[color=pink,
-		style=filled];
-	"CSCI-2200
-Foundations Of Computer Sci" -- "Radoslav Svetlozarov Ivanov"	[minlen=1];
 	"Xiaoyang Liu"	[color=pink,
 		style=filled];
 	"CSCI-2200
 Foundations Of Computer Sci" -- "Xiaoyang Liu";
+	"Radoslav Svetlozarov Ivanov"	[color=pink,
+		style=filled];
+	"CSCI-2200
+Foundations Of Computer Sci" -- "Radoslav Svetlozarov Ivanov"	[minlen=1];
 	"David Eric Goldschmidt"	[color=pink,
 		style=filled];
 	"CSCI-2200
@@ -135,14 +135,14 @@ Data Analytics" -- "Thilanka Munasinghe"	[minlen=2];
 	"CSCI-4800
 Numerical Computing"	[color=cornflowerblue,
 		style=filled];
-	"Mark H Holmes"	[color=pink,
-		style=filled];
-	"CSCI-4800
-Numerical Computing" -- "Mark H Holmes"	[minlen=1];
 	"Yuri V Lvov"	[color=pink,
 		style=filled];
 	"CSCI-4800
-Numerical Computing" -- "Yuri V Lvov"	[minlen=2];
+Numerical Computing" -- "Yuri V Lvov"	[minlen=1];
+	"Mark H Holmes"	[color=pink,
+		style=filled];
+	"CSCI-4800
+Numerical Computing" -- "Mark H Holmes"	[minlen=2];
 	"CSCI-4850
 Modern Binary Exploitation"	[color=cornflowerblue,
 		style=filled];
